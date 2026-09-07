@@ -1,1 +1,46 @@
+/* LAUNCHER — BASE / VARIABLES / RESET */
+:root{
+    --focus: #4a80d4;
+  }
+  :focus-visible{
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+  }
+  .skip-link{
+    position:absolute;
+    left:-9999px;
+    top:0;
+    background:#1c1a16;
+    color:#f5f3ef;
+    padding:12px 20px;
+    z-index:1000;
+    border-radius:0 0 8px 0;
+    text-decoration:none;
+    font-family:'Inter',sans-serif;
+    font-size:14px;
+  }
+  .skip-link:focus{
+    left:0;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  :root{
+    --bg:#f5f3ef;
+    --bg-alt:#ece8e1;
+    --ink:#1c1a16;
+    --accent:#1a2e50;
+    --blue-light:#4a80d4;
+    --line:#dcd7cc;
+    --muted:#7a7468;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+  }
 
