@@ -1,0 +1,47 @@
+
+:root{
+  --bg:#f5f3ef; --bg-alt:#ece8e1; --ink:#1c1a16;
+  --accent:#1a2e50; --blue-light:#4a80d4; --line:#dcd7cc; --muted:#7a7468;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.7}
+a{color:inherit}
+header{position:sticky;top:0;z-index:10;height:76px;display:flex;align-items:center;padding:0 6vw;background:rgba(245,243,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.brand{font-family:Arial,sans-serif;font-size:24px;font-weight:800;letter-spacing:-.04em;text-decoration:none}
+.brand span{color:var(--blue-light)}
+nav{margin-left:auto;display:flex;gap:28px;font-size:14px}
+nav a{text-decoration:none;opacity:.7} nav a:hover,nav a.active{opacity:1}
+.menu{display:none}
+.hero{padding:100px 6vw 70px;max-width:1200px;margin:auto}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-light);font-weight:700;margin-bottom:18px}
+h1,h2,h3{font-family:Arial,sans-serif;letter-spacing:-.03em;line-height:1.1}
+h1{font-size:clamp(42px,6vw,76px);max-width:900px;margin-bottom:24px}
+.intro{font-size:18px;color:var(--muted);max-width:700px}
+.layout{max-width:1200px;margin:0 auto;padding:0 6vw 110px;display:grid;grid-template-columns:220px 1fr;gap:70px}
+.toc{position:sticky;top:110px;height:max-content;border-left:1px solid var(--line);padding-left:20px}
+.toc a{display:block;text-decoration:none;color:var(--muted);font-size:14px;margin-bottom:13px}
+.toc a:hover{color:var(--ink)}
+article{max-width:800px}
+article section{padding:0 0 48px;margin-bottom:48px;border-bottom:1px solid var(--line)}
+article section:last-child{border-bottom:0}
+h2{font-size:30px;margin-bottom:18px}
+h3{font-size:19px;margin:28px 0 10px}
+p{margin-bottom:15px}
+ul,ol{padding-left:22px;margin:10px 0 18px}
+li{margin-bottom:8px}
+.note{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;margin:24px 0;color:var(--muted)}
+.placeholder{color:var(--accent);font-weight:700}
+footer{background:#0e1c33;color:rgba(255,255,255,.7);padding:60px 6vw 30px}
+.footer-inner{max-width:1200px;margin:auto}
+.footer-brand{color:#fff;font-size:24px;font-weight:800;margin-bottom:12px}
+.footer-links{display:flex;flex-wrap:wrap;gap:22px;margin:25px 0 40px}
+.footer-links a{text-decoration:none;font-size:14px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:25px;font-size:13px}
+@media(max-width:800px){
+  header{padding:0 20px}.menu{display:block;margin-left:auto;border:0;background:none;font-size:22px}
+  nav{display:none}.hero{padding:75px 20px 50px}.layout{display:block;padding:0 20px 70px}
+  .toc{position:static;margin-bottom:45px;padding:18px 0 5px 18px}
+  h1{font-size:46px} article section{padding-bottom:35px;margin-bottom:35px}
+  footer{padding:50px 20px 25px}
+}

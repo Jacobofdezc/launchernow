@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Launcher — Desarrollo web para negocios que quieren crecer</title>
+<meta name="description" content="Diseñamos y desarrollamos webs rápidas, optimizadas para SEO y pensadas para convertir visitas en clientes. Presencia, Profesional o Reservas: el plan a medida de tu negocio.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.launchernow.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Launcher">
+<meta property="og:title" content="Launcher — Desarrollo web para negocios que quieren crecer">
+<meta property="og:description" content="Diseñamos y desarrollamos webs rápidas, optimizadas para SEO y pensadas para convertir visitas en clientes.">
+<meta property="og:url" content="https://www.launchernow.com/">
+<meta property="og:image" content="https://www.launchernow.com/og-cover.jpg">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Launcher — Desarrollo web para negocios que quieren crecer">
+<meta name="twitter:description" content="Diseñamos y desarrollamos webs rápidas, optimizadas para SEO y pensadas para convertir visitas en clientes.">
+<meta name="twitter:image" content="https://www.launchernow.com/og-cover.jpg">
+
+<meta name="theme-color" content="#f5f3ef">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="Imagen2.svg" fetchpriority="high">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Launcher",
+  "description": "Estudio de diseño y desarrollo web para negocios que quieren crecer en internet.",
+  "url": "https://www.launchernow.com/",
+  "email": "launcher.contacto@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Madrid",
+    "addressCountry": "ES"
+  },
+  "areaServed": "ES",
+  "sameAs": []
+}
+</script>
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/footer.css">
+
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+<header id="site-header">
+  <a href="#" class="header-brand" id="header-brand" style="text-decoration: none;" aria-label="Launcher — inicio">
+    <img id="header-rocket-img" class="header-rocket" src="Imagen2.svg" alt="" width="34" height="34">
+    <img src="launchertexto.png" class="brand-logo-img" alt="Launcher" width="120" height="36">
+  </a>
+  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="header-nav" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="header-nav" id="header-nav" aria-label="Navegación principal">
+    <a href="#problema">Introducción</a>
+    <a href="#pasos">Pasos</a>
+    <a href="#planes">Planes</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<!-- The rocket lives in a fixed-position wrapper that we manually re-position on scroll -->
+<div id="rocket-wrap" aria-hidden="true">
+  <img id="rocket-img" src="Imagen2.svg" alt="" width="520" height="676">
+</div>
+
+<main id="main-content">
+  <section class="hero">
+    <div class="hero-rocket-spacer"><!-- empty: real rocket is the fixed #rocket-wrap positioned on top of this --></div>
+    <div class="hero-text">
+      <span class="eyebrow">LAUNCHER · DISEÑO Y DESARROLLO WEB</span>
+      <h1>Tu idea está lista para <em>despegar</em></h1>
+      <p>4 planes claros, precios fijos y entrega en 3 semanas.
+Elige el que encaja con tu negocio y nosotros hacemos el resto.</p>
+      <div class="cta-row">
+        <a href="#planes" class="btn btn-primary">Ver cómo funciona →</a>
+        <a href="#contacto" class="btn btn-ghost">Hablar con nosotros</a>
+      </div>
+    </div> 
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="content" id="problema" style="max-width: 100%; padding-left: 6vw; padding-right: 6vw; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <span class="eyebrow" style="text-align: center;">EL PROBLEMA REAL</span>
+      <h2>La mayoría de webs de empresa<br>están saboteando su negocio</h2>
+      <p style="margin: 0 auto;">No es un problema de producto. Es un problema de presencia digital. Y tiene solución.</p>
+      
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">⏱️</div>
+          <h3>Carga en más de 3 segundos</h3>
+          <p>Google penaliza las webs lentas y el visitante abandona antes de leer tu propuesta. Cada segundo extra reduce la conversión hasta un 20%.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">🔍</div>
+          <h3>Invisible en Google</h3>
+          <p>Sin SEO técnico, tu web no existe para los buscadores. El 93% de las experiencias online empiezan en Google. Si no apareces, no existes.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">👥</div>
+          <h3>Sin leads, sin negocio</h3>
+          <p>Una web sin captación de contactos es un escaparate sin caja registradora. Los visitantes llegan, miran y se van. El dinero se queda en la mesa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="content" id="pasos" style="max-width: 100%; padding-left: 6vw; padding-right: 6vw; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <span class="eyebrow" style="text-align: center;">TAN SOLO 4 PASOS</span>
+      <h2>De la idea a la web<br>sin complicaciones</h2>
+      <p style="margin: 0 auto;">Un camino directo desde lo que tienes en mente hasta lo que tus clientes ven en pantalla.</p>
+
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>Entender tu negocio</h3>
+          <p>Nos ponemos en tu lugar. Escuchamos qué hace único a tu negocio, quiénes son tus clientes y qué quieres que consiga tu web.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>Primer prototipo</h3>
+          <p>Traducimos lo que nos contaste en un diseño concreto. Lo ves, lo tocas y decides antes de que se escriba una sola línea de código.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>Producto final</h3>
+          <p>Aplicamos tus comentarios y pulimos cada detalle. El resultado es una web que representa tu negocio tal como merece ser visto.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">04</div>
+          <h3>Despliegue en internet</h3>
+          <p>Publicamos tu web, configuramos el dominio y te entregamos las claves. A partir de ese momento, tus clientes pueden encontrarte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="content" id="planes" style="max-width: 100%; padding-left: 6vw; padding-right: 6vw; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <span class="eyebrow" style="text-align: center;">NUESTRA SOLUCIÓN PARA TI</span>
+      <h2>Desarrollo web para empresas<br>orientado a resultados</h2>
+      <p style="margin: 0 auto;">Cada proyecto incluye estrategia, diseño y desarrollo. Sin extras ocultos al final.</p>
+
+      <div class="pricing-grid">
+        <div class="plan-card">
+          <h3 class="plan-name">Presencia</h3>
+          <p class="plan-desc">"Con lo que cobras por un trabajo de un día, cubres la web del año entero."</p>
+          <ul class="plan-features">
+            <li>1 página: Hero · Servicios · Reseñas · CTA</li>
+            <li>Formulario de contacto</li>
+            <li>Mobile-first · carga rápida</li>
+            <li>Primeros 6 meses GRATIS dominio y hosting</li>
+          </ul>
+          <a href="contacto.html" class="btn btn-outline">Solicitar info</a>
+        </div>
+        <div class="plan-card highlight">
+          <span class="plan-tag">MÁS VENDIDO</span>
+          <h3 class="plan-name">Profesional</h3>
+          <p class="plan-desc">"Tus competidores tienen Instagram pero no aparecen en Google. Tú sí vas a aparecer."</p>
+          <ul class="plan-features">
+            <li>4-5 páginas: Inicio · Servicios · Bio · Contacto</li>
+            <li>Integración WhatsApp</li>
+            <li>SEO técnico on-page</li>
+            <li>Mobile-first · carga rápida</li>
+            <li>Primeros 6 meses GRATIS dominio y hosting</li>
+          </ul>
+          <a href="contacto.html" class="btn btn-rust">Solicitar info</a>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">Reservas</h3>
+          <p class="plan-desc">"Con reservas online, reservan a las 11 de la noche mientras tú descansas."</p>
+          <ul class="plan-features">
+            <li>Todo lo de Profesional</li>
+            <li>Motor de reservas online completo</li>
+            <li>Sincronización de calendario (Google, iCal)</li>
+            <li>Recordatorios automáticos</li>
+            <li>Cero comisiones por reserva</li>
+            <li>Primeros 6 meses GRATIS dominio y hosting</li>
+          </ul>
+          <a href="contacto.html" class="btn btn-outline">Solicitar info</a>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">Premium</h3>
+          <p class="plan-desc">"Para negocios que necesitan una plataforma a medida y máxima exclusividad."</p>
+          <ul class="plan-features">
+            <li>Páginas ilimitadas y diseño a medida</li>
+            <li>Integraciones avanzadas (CRM, ERP, etc.)</li>
+            <li>Prioridad máxima de soporte</li>
+            <li>Diseño de marca e identidad visual</li>
+            <li>Funcionalidades personalizadas complejas</li>
+            <li>Primeros 6 meses GRATIS dominio y hosting</li>
+          </ul>
+          <a href="contacto.html" class="btn btn-outline">Solicitar info</a>
+        </div>
+      </div>
+
+      <div class="maintenance-banner">
+        <div class="maintenance-content">
+          <div style="display:flex; align-items:center; gap: 12px; margin-bottom: 8px;">
+            <h3 class="plan-name" style="margin: 0;">Mantenimiento Mensual</h3>
+          </div>
+          <p class="plan-desc" style="margin-bottom: 0; min-height: auto;">Tu web siempre actualizada, segura y funcionando al 100% mes a mes. Indispensable para todos los proyectos.</p>
+        </div>
+        <ul class="plan-features maintenance-features" style="margin-bottom: 0;">
+          <li>Soporte técnico prioritario</li>
+          <li>Actualizaciones de contenido</li>
+          <li>Copias de seguridad y seguridad 24/7</li>
+        </ul>
+        <div class="maintenance-action">
+          <a href="contacto.html" class="btn btn-outline">Consultar plan mensual</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="content" id="faq" style="max-width: 100%; padding-left: 6vw; padding-right: 6vw; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <span class="eyebrow" style="text-align: center;">FAQ</span>
+      <h2>Preguntas frecuentes</h2>
+      
+      <div class="faq-container">
+        <details>
+          <summary>¿Cuánto tarda un proyecto?</summary>
+          <div class="faq-content">Normalmente, un proyecto estándar de 4-5 páginas toma entre 2 y 4 semanas desde la reunión inicial hasta el lanzamiento, dependiendo de la rapidez con la que nos proporciones el contenido y los comentarios.</div>
+        </details>
+        <details>
+          <summary>¿Qué tecnología usan?</summary>
+          <div class="faq-content">Utilizamos las mejores prácticas de la web moderna, enfocándonos en código limpio (HTML/CSS/JS) o frameworks como React/Next.js según la complejidad. Nuestro objetivo es el rendimiento y el SEO por encima de todo.</div>
+        </details>
+        <details>
+          <summary>¿Ofrecen mantenimiento?</summary>
+          <div class="faq-content">Sí, ofrecemos un plan de mantenimiento mensual donde nos encargamos de las actualizaciones, seguridad, copias de respaldo y cualquier cambio de contenido que necesites mes a mes.</div>
+        </details>
+        <details>
+          <summary>¿Trabajan con empresas fuera de mi país?</summary>
+          <div class="faq-content">Por supuesto. Trabajamos de forma 100% remota y asíncrona, adaptándonos a diferentes zonas horarias y gestionando todo el proceso de forma transparente a través de herramientas colaborativas.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="contacto">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2>¿Listo para <em>lanzar</em> tu<br>próximo proyecto?</h2>
+      <p>Cuéntanos en qué punto está tu negocio y te decimos cómo podemos ayudarte a crecer. Primera consulta sin compromiso.</p>
+      <div class="cta-buttons">
+        <a href="contacto.html" class="btn" style="background: #ffffff; color: #0e1c33; padding: 16px 32px; border-radius: 99px; text-decoration: none; font-weight: 600;">Solicitar propuesta →</a>
+        <a href="tel:+34633603542" class="cta-link-hover">Llamar ahora</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" style="display: inline-block; margin-bottom: 16px;" aria-label="Launcher — inicio">
+        <img src="launcherblanco.png" alt="Launcher" style="height: 84px; display: block;" width="220" height="84" loading="lazy">
+      </a>
+      <p>Desarrollo web para negocios que quieren crecer en internet.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Instagram">IG</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="#">Web Corporativa</a></li>
+        <li><a href="#">Tienda Online</a></li>
+        <li><a href="#">Aplicaciones Web</a></li>
+        <li><a href="#">SEO & Rendimiento</a></li>
+        <li><a href="#">Mantenimiento</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Proyectos</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Trabaja con nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="mailto:launcher.contacto@gmail.com">launcher.contacto@gmail.com</a></li>
+        <li><a href="tel:+34633603542">+34 633 603 542</a></li>
+        <li>Madrid, España</li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">
+      &copy; 2026 Launcher. Todos los derechos reservados.
+    </div>
+    <div class="footer-legal">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <a href="politica-privacidad.html">Política de Privacidad</a>
+      <a href="politica-cookies.html">Política de Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

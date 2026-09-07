@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Launch — Contacto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5f3ef;
+    --bg-alt:#ece8e1;
+    --ink:#1c1a16;
+    --rust:#1a2e50;
+    --blue-light:#4a80d4;
+    --line:#dcd7cc;
+    --muted:#7a7468;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed;
+    top:0; left:0; right:0;
+    height:76px;
+    display:flex;
+    align-items:center;
+    padding:0 48px;
+    z-index:100;
+    background:rgba(245,243,239,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-brand{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    text-decoration: none;
+  }
+  .header-rocket{
+    width:34px;
+    height:34px;
+    object-fit:contain;
+    display:block;
+    transform:rotate(325deg);
+  }
+  .brand-logo-img{
+    height: 36px;
+    object-fit: contain;
+    display: block;
+  }
+  .header-nav{
+    margin-left:auto;
+    display:flex;
+    gap:36px;
+    font-size:14px;
+    letter-spacing:.02em;
+  }
+  .header-nav a{
+    color:var(--ink);
+    text-decoration:none;
+    opacity:.75;
+  }
+  .header-nav a:hover{opacity:1;}
+  @media (max-width:860px){
+    header{padding:0 24px;}
+  }
+
+  /* BUTTONS */
+  .btn{
+    font-family:'Inter',sans-serif;
+    font-weight:500;
+    font-size:15px;
+    padding:14px 28px;
+    border-radius:999px;
+    text-decoration:none;
+    transition:transform .2s ease, opacity .2s ease, background 0.2s ease, border-color 0.2s ease;
+    display:inline-block;
+    cursor:pointer;
+  }
+  .btn-primary{
+    background:var(--ink);
+    color:var(--bg);
+    border: none;
+  }
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-rust{ background: var(--rust); color: white; border: 1px solid var(--rust); transition: all 0.2s ease; }
+  .btn-rust:hover{ background: var(--blue-light); border-color: var(--blue-light); transform:translateY(-2px); }
+
+  /* CONTACT PAGE SPECIFIC */
+  .contact-layout{
+    display: flex;
+    max-width: 1200px;
+    margin: 140px auto 100px;
+    padding: 0 6vw;
+    gap: 8vw;
+  }
+  .contact-info{
+    flex: 1;
+  }
+  .contact-info h1{
+    font-family:'Syne',sans-serif;
+    font-weight:800;
+    font-size:clamp(36px, 4vw, 56px);
+    line-height:1.1;
+    margin-bottom:24px;
+    color: var(--ink);
+  }
+  .contact-info p{
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 400px;
+  }
+  .contact-form{
+    flex: 1;
+    background: #ffffff;
+    padding: 48px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+  }
+  .form-group{
+    margin-bottom: 24px;
+  }
+  .form-group label{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .form-control{
+    width: 100%;
+    padding: 16px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+    transition: border-color 0.2s;
+  }
+  .form-control:focus{
+    outline: none;
+    border-color: var(--rust);
+    background: #ffffff;
+  }
+  textarea.form-control{
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  /* NUEVA TARJETA DE CONTACTO DIRECTO */
+  .direct-contact-card {
+    margin-top: 48px;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    max-width: 450px;
+  }
+  .direct-contact-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  .direct-contact-card p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  .direct-contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .direct-contact-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s;
+  }
+  .direct-contact-links a:hover {
+    color: var(--blue-light);
+  }
+  .direct-contact-links svg {
+    width: 20px;
+    height: 20px;
+    color: var(--rust);
+  }
+
+  @media(max-width: 900px){
+    .contact-layout{ flex-direction: column; gap: 48px; margin-top: 120px; }
+    .contact-form{ padding: 32px 24px; }
+    .direct-contact-card { max-width: 100%; }
+  }
+
+  /* FOOTER */
+  .site-footer { background: #0e1c33; color: rgba(255, 255, 255, 0.7); padding: 64px 6vw 32px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 14px; text-align: left; margin-top: auto; }
+  .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
+  .footer-brand h3 { font-family: 'Syne', sans-serif; color: #ffffff; font-size: 24px; margin-bottom: 16px; font-weight: 700; }
+  .footer-brand p { margin-bottom: 24px; line-height: 1.6; max-width: 280px; }
+  .footer-socials { display: flex; gap: 16px; }
+  .footer-socials a { color: #ffffff; text-decoration: none; opacity: 0.7; transition: opacity 0.2s; font-size: 18px; font-weight: bold; }
+  .footer-socials a:hover { opacity: 1; }
+  .footer-col h4 { color: #ffffff; font-family: 'Syne', sans-serif; font-size: 16px; margin-bottom: 24px; font-weight: 600; }
+  .footer-col ul { list-style: none; padding: 0; margin: 0; }
+  .footer-col ul li { margin-bottom: 12px; }
+  .footer-col ul li a { color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--blue-light); }
+  .footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-legal a { color: rgba(255, 255, 255, 0.7); text-decoration: none; margin-left: 24px; transition: color 0.2s; }
+  .footer-legal a:hover { color: #ffffff; }
+  @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; justify-content: center; } .footer-legal a { margin: 0 12px; } }
+</style>
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+<header id="site-header">
+  <a href="index.html" class="header-brand" id="header-brand">
+    <img class="header-rocket" src="Imagen2.svg" alt="">
+    <img src="launchertexto.png" class="brand-logo-img" alt="LAUNCHER">
+  </a>
+  <nav class="header-nav">
+    <a href="index.html#problema">Introducción</a>
+    <a href="index.html#pasos">Pasos</a>
+    <a href="index.html#planes">Planes</a>
+    <a href="index.html#faq">FAQ</a>
+  </nav>
+</header>
+
+<main style="flex: 1;">
+  <div class="contact-layout">
+    <div class="contact-info">
+      <h1>Hablemos de tu proyecto</h1>
+      <p>Cuéntanos en qué punto se encuentra tu empresa y qué objetivos quieres lograr en internet. Revisaremos tu solicitud y te contactaremos en menos de 24 horas para agendar una primera llamada exploratoria.</p>
+      
+      <div style="margin-top: 48px;">
+        <h4 style="font-family:'Syne',sans-serif; font-size:18px; margin-bottom: 12px;">¿Qué sucede después?</h4>
+        <ul style="list-style:none; color: var(--muted); line-height: 1.6; font-size: 15px;">
+          <li style="margin-bottom:12px; display:flex; gap:12px;">
+            <strong style="color:var(--rust);">1.</strong> Revisamos tu propuesta para entender tus necesidades.
+          </li>
+          <li style="margin-bottom:12px; display:flex; gap:12px;">
+            <strong style="color:var(--rust);">2.</strong> Agendamos una videollamada de 30 minutos.
+          </li>
+          <li style="margin-bottom:12px; display:flex; gap:12px;">
+            <strong style="color:var(--rust);">3.</strong> Preparamos un presupuesto adaptado a ti.
+          </li>
+        </ul>
+      </div>
+
+      <!-- NUEVA TARJETA AQUÍ -->
+      <div class="direct-contact-card">
+        <h4>Escríbenos directamente</h4>
+        <p>Si prefieres saltarte el formulario, mándanos un correo o un WhatsApp y te contestamos igual de rápido.</p>
+        
+        <div class="direct-contact-links">
+          <a href="mailto:launcher.contacto@gmail.com">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+            launcher.contacto@gmail.com
+          </a>
+          
+          <a href="https://wa.me/34900000000" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+            </svg>
+            +34 633 603 542
+          </a>
+        </div>
+      </div>
+      <!-- FIN NUEVA TARJETA -->
+
+    </div>
+    
+    <div class="contact-form">
+      <form action="https://formspree.io/f/xgaennwj" method="POST">
+        <div class="form-group">
+          <label for="name">Nombre completo</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Ej. Laura Gómez" required>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="tu@empresa.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono (opcional)</label>
+            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+34...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="company">Nombre de tu empresa o proyecto</label>
+          <input type="text" id="company" name="company" class="form-control" placeholder="¿Cómo se llama tu negocio?">
+        </div>
+        
+        <div class="form-group">
+          <label for="type">¿Qué tipo de servicio buscas?</label>
+          <select id="type" name="type" class="form-control" required>
+            <option value="" disabled selected>Selecciona una opción...</option>
+            <option value="one-page">Diseño Web One-Page (Presencia)</option>
+            <option value="corporate">Web Corporativa (Profesional)</option>
+            <option value="booking">Web con Motor de Reservas</option>
+            <option value="custom">Plataforma a Medida (Premium)</option>
+            <option value="other">Otro tipo de proyecto</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="budget">Presupuesto estimado</label>
+          <select id="budget" name="budget" class="form-control" required>
+            <option value="" disabled selected>Indica tu rango de inversión...</option>
+            <option value="low">Menos de 500€</option>
+            <option value="medium">500€ - 1.000€</option>
+            <option value="high">1.000€ - 3.000€</option>
+            <option value="premium">Más de 3.000€</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Háblanos sobre tu idea</label>
+          <textarea id="message" name="message" class="form-control" placeholder="¿Cuáles son los principales retos que quieres resolver? ¿Tienes referencias de webs que te gusten?" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-rust" style="width: 100%; text-align: center; font-size: 16px; padding: 16px;">Enviar solicitud de propuesta</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" style="display: inline-block; margin-bottom: 16px;">
+        <img src="launcherblanco.png" alt="Launcher" style="height: 84px; display: block;">
+      </a>
+      <p>Desarrollo web para negocios que quieren crecer en internet.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="Instagram">IG</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="#">Web Corporativa</a></li>
+        <li><a href="#">Tienda Online</a></li>
+        <li><a href="#">Aplicaciones Web</a></li>
+        <li><a href="#">SEO & Rendimiento</a></li>
+        <li><a href="#">Mantenimiento</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Proyectos</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Trabaja con nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="mailto:launcher.contacto@gmail.com">launcher.contacto@gmail.com</a></li>
+        <li><a href="tel:+34633603542">+34 633 603 542</a></li>
+        <li>Madrid, España</li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">
+      &copy; 2026 Launcher. Todos los derechos reservados.
+    </div>
+    <div class="footer-legal">
+      <a href="#">Aviso Legal</a>
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Política de Cookies</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
